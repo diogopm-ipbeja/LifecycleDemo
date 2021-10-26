@@ -47,14 +47,14 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+    /*override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         // Invoked if a bundle exists (data registered on onSaveInstanceState)
         // Invoked between onStart and onResume lifecycle callbacks
         super.onRestoreInstanceState(savedInstanceState)
         Log.i(TAG, "Lifecycle onRestoreInstanceState called")
         this.counter = savedInstanceState.getInt("counter", 0)
         this.counterView.text = "$counter"
-    }
+    }*/
 
 
     override fun onResume() {
@@ -99,14 +99,14 @@ class MainActivity : AppCompatActivity() {
         super.onStop()
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
+    /*override fun onSaveInstanceState(outState: Bundle) {
         // Save data we want to persist if this Activity is destroyed (on rotation, low memory, etc)
         // Invoked between onStop and onDestroy lifecycle callbacks unless the Activity was closed
         // by the user (eg. back pressed)
         Log.i(TAG, "Lifecycle onSaveInstanceState called.")
         super.onSaveInstanceState(outState)
         outState.putInt("counter", counter)
-    }
+    }*/
 
     override fun onDestroy() {
         // The final call you receive before your activity is destroyed. This can happen either
